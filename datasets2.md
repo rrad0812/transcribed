@@ -1,4 +1,4 @@
-[[Datasets 2]](datasets2.md)[[Table of content]](index.md)[[Datasets 3]](datasets3.md)
+[[Datasets]](datasets.md)[[Table of content]](index.md)[[Client server interaction]](client-server.md)
 
 # Datasets 2
 
@@ -6,7 +6,6 @@ Before we start, we will create a copy of the catalog item and make a table to
 display data.
 
 ```javascript
-
   c = task.catalog.copy();
   c.create_table($('#content'), {height: 820});
   c.open(true);
@@ -17,7 +16,6 @@ display data.
 The `open` and `apply` methods can have `callback` and `async` parameters. If `callback` function is passed as a parameter or one of parameters is true, the request to the server is executed asynchronously, and after that, as the dataset is received, the `callback` function, if defined, will be executed.
 
 ```javascript
-
   c.open( function() { 
     c.warning(c.record_count()) 
   })
@@ -28,7 +26,6 @@ The `open` and `apply` methods can have `callback` and `async` parameters. If `c
 Otherwise the request is executed synchronously.
 
 ```javascript
-
   c.open()
 ```
 
@@ -51,7 +48,6 @@ It can have the following parameters:
 - `offset`.
 
 ```javascript
-
   options = {
     where: {value__range: [10, 20]},
     fields: ['name', 'value'],
@@ -69,7 +65,6 @@ The order of parameters doesn't matter. Some parameters can be omitted!
 Let's demonstrate the `func` parameter:
 
 ```javascript
-
   c.open(
     {
       where: {value__range: [10, 20]},
@@ -84,7 +79,6 @@ There are auxiliary methods: `set_where`, `set_fields`, `set_order_by`. Calling
 these methods before the `open` method is similar to specifying corresponding parameters:
 
 ```javascript
-
   c.open({
       where: {value__range: [10, 20]},
       fields: ['name', 'value'],
@@ -97,7 +91,6 @@ these methods before the `open` method is similar to specifying corresponding pa
 It is the same as:
 
 ```javascript
-
   c.set_where( {value__range: [10, 20]} )
   c.set_fields( ['name', 'value'] )
   c.set_order_by( ['-value'] )
@@ -107,14 +100,12 @@ It is the same as:
 After calling the `open` method, the action of these methods is canceled.
 
 ```javascript
-
   c.open(true)
 ```
 
 This can be used, for example, by setting filtering before calling the `view` method, which calls the `open` method in the `on_view_form_created` event handler.
 
 ```javascript
-
   task.catalog.set_where({value__range: [10, 60]})
   task.catalog.view()
 ```
@@ -130,7 +121,6 @@ There are three ways to define what records an item dataset will get from the da
 Let's we create the `value_ge` filter for the `value` field, with filter type `GE` (greater than or equal to). Let's set its value to 50.
 
 ```javascript
-
     c.filters.value_ge.value = 50;
     c.open(true);
 ```
@@ -141,7 +131,6 @@ Filtering is performed as follows:
   method was called or the element has `filters` whose values are set.
 
   ```javascript
-
     c.set_where({value__ge: 10});
     c.open({where: {value__ge: 90}}, true);
   ```
@@ -150,7 +139,6 @@ Filtering is performed as follows:
   is used.
 
   ```javascript
-
     c.set_where({value__ge: 10});
     c.open(true);
   ```
@@ -158,14 +146,12 @@ Filtering is performed as follows:
 * When the `where` parameter is omitted and the `set_where` method was not called, `filters` are used
 
   ```javascript
-
     c.open(true)
   ```
 
 To disable a filter set its value to `null`
 
 ```javascript
-
   c.filters.value_ge.value = null;
   c.open(true);
 ```
@@ -179,4 +165,4 @@ of the fields that are followed, after double underscore, by a filter symbol.
 
 For more information, see the Documentation.
 
-[[Datasets 2]](datasets2.md)[[Table of content]](index.md)[[Datasets 3]](datasets3.md)
+[[Datasets]](datasets.md)[[Table of content]](index.md)[[Client server interaction]](client-server.md)

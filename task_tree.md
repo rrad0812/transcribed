@@ -11,7 +11,6 @@ When the browser loads `jam.js` library it creates an empty `client task` object
 If we run the Demo application and open the browser web console, and enter:
 
 ```javascript
-
   > task
   > Task {owner: undefined, item_name: 'demo', item_caption: 'Jam.py demo', visible: null, ID: 1, ...}
 ```
@@ -23,7 +22,6 @@ It represents a `tree`. Each `item` of the `tree` can `own` other `items`:
 ```javascript
 
   > task.items
-
     (6) [Group, Group, Group, Group, Group, Group]
     0: Group {owner: Task, item_name: 'journals', item_caption: 'Journals', visible: true, ID: 3, ...}
     1: Group {owner: Task, item_name: 'catalogs', item_caption: 'Catalogs', visible: true, ID: 2, ...}
@@ -38,7 +36,6 @@ It represents a `tree`. Each `item` of the `tree` can `own` other `items`:
 and so on recursively:
 
 ```javascript
-
   > task.items[1].items
 
     (6) [Item, Item, Item, Item, Item, Item]
@@ -57,7 +54,6 @@ All `items` are derived from the common ancestor class - `AbstractItem`.
 Each item is an attribute of its owner. 
 
 ```javascript
-
   > task
   Task {owner: undefined, item_name: "demo", item_caption: "Jam.py demo", visible: null, ID: 1, ...}
 
@@ -71,7 +67,6 @@ Each item is an attribute of its owner.
 `Items` that are owned by `Groups` are also attributes of the `Task` - they must to have unique names.
 
 ```javascript
-
   > task.customers
   Item {owner: Group, item_name: "customers", item_caption: "Customers", visible: true, ID: 10, ...}
 ```
@@ -79,7 +74,6 @@ Each item is an attribute of its owner.
 To get the `owner` of `item`, use its `owner` attribute. 
 
 ```javascript
-
   > task.customers.owner
   Group {owner: Task, item_name: "catalogs", item_caption: "Catalogs", visible: true, ID: 2, ...}
 
@@ -90,7 +84,6 @@ To get the `owner` of `item`, use its `owner` attribute.
 To get the `task` to which the `item` belongs, use its `task` attribute.
 
 ```javascript
-
   > task.customers.task
   Task {owner: undefined, item_name: "demo", item_caption: "Jam.py demo", visible: null, ID: 1, ...}
 
@@ -101,7 +94,6 @@ To get the `task` to which the `item` belongs, use its `task` attribute.
 Each `item` of the `tree` has a lot of attributes and methods.
 
 ```javascript
-
   // Modal customer view form is start up.
   > task.customers.view()            
 ```
@@ -111,7 +103,6 @@ Each `item` of the `tree` has a lot of attributes and methods.
 Let's demonstrate the `task` on the `server`.  The `on_created` event is triggered when the `task tree` is created, or rebuilt if it has changed.
 
 ```python
-
   print (task.item_name)
   for group in task.items:
     print ('  ', group.item_name)
@@ -131,7 +122,6 @@ as a parameter to the functions and event handlers of the module, and knowing th
 In addition, it is possible to create copies of the `items` associated with the `database table`. 
 
 ```python
-
   cust_b = task.customers.copy()
   cust_b.set_where({last_name__startwith: 'b'})
   cust_b.view()

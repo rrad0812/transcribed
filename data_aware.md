@@ -1,9 +1,9 @@
-===================
-Data aware controls
-===================
 
-The *create_table* method
--------------------------
+# Data aware controls
+
+
+### The create_table method
+
 Let's clear the div with the id = 'content' and add a div with the id = 'table' to it.
 
 .. code-block:: js

@@ -1,6 +1,8 @@
-==================
-Fields and filters
-==================
+[[Working with data on the server]](server-data.md)[[Table of content]](index.md)
+[[Data aware]](data_aware.md)
+
+# Fields and filters
+
 For this session, we created a journal, with name journal, with different types 
 of fields: *currency*, type of currency, *date*, type of date, *integer*, type of 
 integer, *lookup*, type of integer, lookup_item is catalog, *lookup_value*, type of 
@@ -45,8 +47,8 @@ of the item that owns it.
   task.journal.date.owner.currency
   task.journal.date.owner.currency.owner
 
-Access to the item dataset
---------------------------
+### Access to the item dataset
+
 To access the item dataset, the field object have the following properties: *data*, 
 *value*, *text*, *lookup_value*, *lookup_text*, *display_text*.
 
@@ -107,8 +109,8 @@ To access the item dataset, the field object have the following properties: *dat
 .. note::
   The changes to lookup_value and lookup_text properties are not stored in the database.
 
-Field event handlers
---------------------
+### Field event handlers
+
 Items generate some events associated with fields. With event handlers that process 
 this events is passed as a parameter the associated field. 
 
@@ -206,8 +208,8 @@ set up filters for the lookup item.
       }
   }
 
-Filters
--------
+### Filters
+
 All items have a filters attribute - a list of filter objects that are used to visually 
 determine the request parameters made by the application to the project database.
 Let's loop over filters:
@@ -242,3 +244,6 @@ To get or set filter value use filter value property
 
 .. note::
 	Items can generate some events associated with filters. 
+
+[[Working with data on the server]](server-data.md)[[Table of content]](index.md)
+[[Data aware]](data_aware.md)

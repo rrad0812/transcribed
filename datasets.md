@@ -12,7 +12,6 @@ Before we start, we will create a copy of the catalog item and create a table to
 display its data:
 
 ```javascript
-
   c = task.catalog.copy()
   c.create_table($('#content'), {height: 820})
 ```
@@ -23,7 +22,6 @@ A `dataset` is set of data records, stored in memory.
 Before we can use a dataset we have to call the `open` method of the `Catalog` item. This method sends a request to the server to get dataset from `catalog` database table.
 
 ```javascript
-
   c.open(true)
 ```
 
@@ -31,14 +29,12 @@ Since the table is empty, the dataset does not contain any record. We can verify
 this by calling the `record_count` method of the `Catalog` item.
 
 ```javascript
-
   c.record_count()           // Result is 0
 ```
 
 Let's fill dataset with records:
 
 ```javascript
-
   for (var i = 0; i < 10 ; i++ ) {
     c.append();
     c.name = 'Record ' + (i + 1);
@@ -50,7 +46,6 @@ Let's fill dataset with records:
 Now, we can navigate the dataset:
 
 ```javascript
-
   // Go to the first record in the dataset
   c.first();
   // Go to the last record in the dataset
@@ -70,7 +65,6 @@ made to go beyond the `first` or the `last record`.
 Now we can go through all records in the dataset:
 
 ```javascript
-
   c.first()
   while(!c.eof()) {
     console.log(c.name.value);
@@ -81,7 +75,6 @@ Now we can go through all records in the dataset:
 There is another way to iterate over the dataset records on the client:
 
 ```javascript
-
   c.each(function(c) {
       console.log(c.name.value);
   })
@@ -90,7 +83,6 @@ There is another way to iterate over the dataset records on the client:
 We can stop iteration by returning `false`:
 
 ```javascript
-
   c.each(function(c) {
     console.log(c.name.value);
     if (c == 5) {
@@ -103,14 +95,12 @@ To change the record, we need to set the dataset in `edit` mode. This is done by
 calling the `edit` method.
 
 ```javascript
-
   c.edit()
 ```
 
 When the record is in `edit` mode, the `is_edited` and `is_changing` methods return `true`.
 
 ```javascript
-
   c.is_edited()              // true
   c.is_changing()            // true
 ```
@@ -118,7 +108,6 @@ When the record is in `edit` mode, the `is_edited` and `is_changing` methods ret
 To save changes in memory, call the `post` method. The `post` method is automatically called when dataset cursor moves to another record.
 
 ```javascript
-
   c.value.value = 5000
   c.post()
   c.is_edited()              // false
@@ -132,7 +121,6 @@ To save changes in memory, call the `post` method. The `post` method is automati
 When we append a new record or insert a record:
 
 ```javascript
-
   c.append()
   c.is_new()                 // true
   c.is_changing()            // true
@@ -144,14 +132,12 @@ When we append a new record or insert a record:
 To cancel `edit` or `append/insert` operation call the `cancel` method.
 
 ```javascript
-
   c.cancel()
 ```
 
 To delete a record call the `delete` method.
 
 ```javascript
-
   c.delete()
 ```
 
@@ -159,7 +145,6 @@ This method deletes the record and moves cursor on to the next record. This way,
 we can delete all records in the database.
 
 ```javascript
-
   c.first()
   while(!c.eof()) {
     c.delete();
@@ -169,7 +154,6 @@ we can delete all records in the database.
 Now we add 500 records:
 
 ```javascript
-
   for (var i = 0; i < 500 ; i++ ) {
     c.append();
     c.name = 'Record ' + (i + 1);
@@ -181,7 +165,6 @@ Now we add 500 records:
 Every time the addition, modification or deletion of a record occurs, visual contols display these changes. This can take quite some time. To avod this you can use following methods: `disable_controls`, `enable_controls`, `update_controls`.
 
 ```javascript
-
   // Add 2000 records
   c.disable_controls()
   try {
@@ -203,7 +186,6 @@ Every time the addition, modification or deletion of a record occurs, visual con
 Now we can delete all of 2500 records
 
 ```javascript
-  
   c.disable_controls();
   try {
     c.first();
@@ -220,7 +202,6 @@ Now we can delete all of 2500 records
 Let's add records again.
   
 ```javascript
-  
   c.disable_controls()
   try {
     for (var i = 0; i < 1000 ; i++ ) {
@@ -250,7 +231,6 @@ Data items stores log of all changes to the dataset, if `log_changes` attribute
 is set to true.
 
 ```javascript
-
   c.log_changes             // true
   c.disable_controls()
   try {
@@ -298,7 +278,6 @@ For following methods: `append`, `insert`, `edit`, `cancel`, `post` and `apply`,
 execution of this methods by throwing an exception or calling the `abort` method.
 
 ```javascript
-
   c.on_before_scroll = function(item) {
     item.abort('No way');
   }
@@ -310,7 +289,6 @@ the text "No way".
 Now we define `before_post` event handler
 
 ```javascript
-
   c.on_before_scroll = undefined
   c.before_post = function(item) {
     c.name.value = 'record' + c.value.value;
