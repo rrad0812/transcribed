@@ -6,23 +6,24 @@ Jam.py `server` application creates a `server task`, containing a `task tree`, b
 
 ### The client task
 
-When the browser loads jam.js library it creates an empty client task object. After 
-the document is loaded the client task loads itself from the server task object.
+When the browser loads `jam.js` library it creates an empty `client task` object. After the document is loaded the `client task` loads itself from the `server task` object.
 
 If we run the Demo application and open the browser web console, and enter:
 
-.. code-block:: console
+```javascript
 
   > task
   > Task {owner: undefined, item_name: 'demo', item_caption: 'Jam.py demo', visible: null, ID: 1, ...}
+```
 
-The task, on the client, is a global object and is available in all client modules.
-It represents a tree. Each item of the tree can own other items:
+`The task` object, on the client, is a `global` object and is available in all client modules. 
 
-.. code-block:: console
+It represents a `tree`. Each `item` of the `tree` can `own` other `items`:
+
+```javascript
 
   > task.items
-  
+
     (6) [Group, Group, Group, Group, Group, Group]
     0: Group {owner: Task, item_name: 'journals', item_caption: 'Journals', visible: true, ID: 3, ...}
     1: Group {owner: Task, item_name: 'catalogs', item_caption: 'Catalogs', visible: true, ID: 2, ...}
@@ -32,10 +33,11 @@ It represents a tree. Each item of the tree can own other items:
     5: Group {owner: Task, item_name: 'system', item_caption: 'System', visible: false, ID: 26, ...}
     length: 6
     __proto__: Array(0)
+```
 
 and so on recursively:
 
-.. code-block:: console
+```javascript
 
   > task.items[1].items
 
@@ -48,12 +50,13 @@ and so on recursively:
     5: Item {owner: Group, item_name: 'mail', item_caption: 'Mail', visible: false, ID: 25, ...}
     length: 6
     __proto__: Array(0)
+```
 
-All items are derived from the common ancestor class - AbstractItem.  
+All `items` are derived from the common ancestor class - `AbstractItem`.  
 
 Each item is an attribute of its owner. 
 
-.. code-block:: console
+```javascript
 
   > task
   Task {owner: undefined, item_name: "demo", item_caption: "Jam.py demo", visible: null, ID: 1, ...}
@@ -63,83 +66,83 @@ Each item is an attribute of its owner.
 
   > task.catalogs.customers
   Item {owner: Group, item_name: "customers", item_caption: "Customers", visible: true, ID: 10, ...}
+```
 
+`Items` that are owned by `Groups` are also attributes of the `Task` - they must to have unique names.
 
-Items that are owned by groups are also attributes of the task - they must to have unique names.
-
-.. code-block:: console
+```javascript
 
   > task.customers
   Item {owner: Group, item_name: "customers", item_caption: "Customers", visible: true, ID: 10, ...}
+```
 
-To get the owner of the item, use its owner attribute. 
+To get the `owner` of `item`, use its `owner` attribute. 
 
-.. code-block:: console
+```javascript
 
   > task.customers.owner
   Group {owner: Task, item_name: "catalogs", item_caption: "Catalogs", visible: true, ID: 2, ...}
 
   > task.catalogs.owner
   Task {owner: undefined, item_name: "demo", item_caption: "Jam.py demo", visible: null, ID: 1, ...}
+```
 
-To get the task to which the item belongs, use its task attribute.
+To get the `task` to which the `item` belongs, use its `task` attribute.
 
-.. code-block:: console
+```javascript
 
   > task.customers.task
   Task {owner: undefined, item_name: "demo", item_caption: "Jam.py demo", visible: null, ID: 1, ...}
 
   > task.journals.task
   Task {owner: undefined, item_name: "demo", item_caption: "Jam.py demo", visible: null, ID: 1, ...}
+```
 
-Each item of the tree has a lot of attributes and methods.
+Each `item` of `the tree` has a lot of attributes and methods.
 
-.. code-block:: console
+```javascript
 
-  > task.customers.view()            // Modal customer view form is start up.
+  // Modal customer view form is start up.
+  > task.customers.view()            
+```
 
-The server task
----------------
-Let's demonstrate the task on the server.  The *on_created event* is triggered when 
-the task tree is created, or rebuilt if it has changed.
+### The server task
 
-.. code-block:: py
+Let's demonstrate `the task` on `the server`.  The `on_created` event is triggered when `the task tree` is created, or rebuilt if it has changed.
+
+```python
 
   print (task.item_name)
   for group in task.items:
-      print ('  ', group.item_name)
-      for item in group.items:
-          print ('    ', item.item_name)
-          for detail in item.items:
-              print ('      ', detail.item_name)
+    print ('  ', group.item_name)
+    for item in group.items:
+      print ('    ', item.item_name)
+      for detail in item.items:
+        print ('      ', detail.item_name)
+```
 
 Result we can see on the our server console:
 
-.. image:: _images/on_created.png
-    :align: center
-    :alt: Demonstrate the server task
+![Demonstrate on_created on the server task](_images/on_created.png)
 
-The task is not global object in the server module. But usually it is passed 
-as a parameter to the functions and event handlers of the module, and knowing this 
-item we can get access to any other item of the tree. 
+`The task` is not global object in `the server` module. But usually it is passed 
+as a parameter to the functions and event handlers of the module, and knowing this item we can get access to any other item of `the tree`. 
 
-In addition, it is possible to create copies of the items associated with the database table. 
+In addition, it is possible to create copies of `the items` associated with `the database table`. 
 
-.. code-block:: py
+```python
 
   cust_b = task.customers.copy()
   cust_b.set_where({last_name__startwith: 'b'})
   cust_b.view()
-  
-These copies are not included in the task tree and are deleted by the garbage collector 
-when they are no longer used, but you can create a task attribute that references it.
+```
 
-The Jam.py Workflow
--------------------
+These copies are not included in `the task tree` and are deleted by the garbage collector when they are no longer used, but you can create a task attribute that references it.
+
+### The Jam.py Workflow
+
 On the bellow image is displayed the Jam.py workflow graphically.
 
-.. image:: _images/jampy-workflow.png
-    :align: center
-    :alt: Jam.py workflow
+![Jam.py Workflow](_images/jampy-workflow.png)
 
 [[Getting started]](getting_started) [[Table of content]](index.md) [[Datasets]](datasets.md)

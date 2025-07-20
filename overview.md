@@ -48,15 +48,15 @@ Suppose we created a `customers` item in The Application Builder.
 
 Now we can create `customers` form `modal`:
 
-  ```javascript
-      task.customers.view()
-  ```
+```javascript
+  task.customers.view()
+```
 
-  or, `modeles`:
+or, `modeles`:
 
-  ```javascript
-      task.customers.view($('#content'))
-  ```
+```javascript
+  task.customers.view($('#content'))
+```
 
 **Note**: This code we can get run in the web javascript console of our browsers.
 
@@ -67,53 +67,53 @@ We have `selection` checkboxes for work with choosen records:
 * Turn on selection checkboxes:
   
   ```javascript 
-      task.customers.selections = []
+    task.customers.selections = []
   ```
 
 * After changing their value in the customer form, we check their values
 
   ```javascript
-      task.customers.selections
+    task.customers.selections
   ```
 
 * Turn off it:
   
   ```javascript
-      task.customers.selections = undefined
+    task.customers.selections = undefined
   ```
 
 ### Play with records of dataset:
 
-  ```javascript
-    // Go to the next record in the current dataset
-    task.customers.next()
-    
-    // Get value of the lastname field of the current dataset record
-    task.customers.lastname.value
-    
-    // Get edit form for the current dataset record
-    task.customers.create_edit_form()
-    
-    // Go to the next record in the dataset
-    task.customers.next()
-    
-    // Let we insert a blanc record in the dataset, 
-    // and get edit form for the current dataset record
-    task.customers.insert_record()
-    
-    // Let we set value of the lastname field of the current dataset record
-    task.customers.lastname.value = 'Yushev'
-    
-    // Let we save value of the current record in the database
-    task.customers.apply_record()
-  ```
+```javascript
+  // Go to the next record in the current dataset
+  task.customers.next()
+  
+  // Get value of the lastname field of the current dataset record
+  task.customers.lastname.value
+  
+  // Get edit form for the current dataset record
+  task.customers.create_edit_form()
+  
+  // Go to the next record in the dataset
+  task.customers.next()
+  
+  // Let we insert a blanc record in the dataset, 
+  // and get edit form for the current dataset record
+  task.customers.insert_record()
+  
+  // Let we set value of the lastname field of the current dataset record
+  task.customers.lastname.value = 'Yushev'
+  
+  // Let we save value of the current record in the database
+  task.customers.apply_record()
+```
 
 ## Event-driven Jam.py nature  
 
 Let we write a `on_after_insert` event handler of the item, with the `unitprice` field:
   
 ```javascript
-    item.unitprice.value = 1;
+  item.unitprice.value = 1;
 ```  
     
 From now on, each newly added record will have predefined value of the `unitprice` field equally 1.0.

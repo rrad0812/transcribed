@@ -14,9 +14,9 @@ From now on, we will only consider working with version 3 of the Python interpre
 
 In a working directory we should create virtual environment:
 
-    >> mkdir myenv
-    >> cd my myenv
-    >> py -3.7 -m venv .
+    > mkdir myenv
+    > cd my myenv
+    > py -3.7 -m venv .
   
 Now, we activating our virtual enviroment:
 
@@ -26,7 +26,7 @@ Now, we activating our virtual enviroment:
 
 Now, we can installing Jam.py package
 
-    >> (myenv) > pip install jam.py
+    > (myenv) > pip install jam.py
 
 ### Creating a Jam.py project
 
@@ -35,14 +35,14 @@ We want to make a simple CRM application.
 First we will create a folder for the new project, and in this folder we will 
 run the `jam-project.py` script to create the project structures:
 
-    >> (myenv) > mkdir crm
-    >> (myenv) > cd crm
-    >> (myenv) > python <where is myenv dir>\bin\jam-project.py
+    > (myenv) > mkdir crm
+    > (myenv) > cd crm
+    > (myenv) > python <where is myenv dir>\bin\jam-project.py
 
 
 Then run the `server.py` script created by `jam-project.py`.
 
-    >> (myenv) > python server.py
+    > (myenv) > python server.py
 
 To complete the creation of the project we'll start [appbuilder page](http://localhost:8080/builder.html) in any browser:
 
@@ -109,11 +109,8 @@ Let's add a customer.
 Now in the Journals group we create `Contacts` item, and its fields
 
 * `Date`, datetime field, 
-
 * `Customer`, lookup field, that will store a reference to a record in the `Customers` table,
-
 * `Firstname` and `Phone`, lookup fields, but for this fields we specify the `Customer` field as a `master_field` attribute. In this case the Jam.py won't create fields in the database `Contacts` table.
-
 * `Notes`, text field, lenght = 100
 
 Let's open the `Contacts` item in the application home page.
@@ -131,7 +128,6 @@ Now, for convenience, we duplicate [appbuilder page](http://localhost:8080/build
 
 * Let's open `Contacts` item again and add a `lookup field Status` by specifying 
   the `Status lookup list`.
-
 * Let's specify the `Customer` field attributes: 
   
   * `is required`
@@ -229,7 +225,7 @@ Let's create a event handler for `the on_view_form_created` event.
 ```javascript
   function on_view_form_created(item) {
       item.view_form.find('#customers-btn').click(function() {
-          task.customers.view();
+        task.customers.view();
       });
   }
 ```
