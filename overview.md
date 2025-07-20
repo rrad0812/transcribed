@@ -55,6 +55,7 @@ Now we can create `customers` form `modal`:
 or, `modeles`:
 
 ```javascript
+
   task.customers.view($('#content'))
 ```
 
@@ -67,24 +68,28 @@ We have `selection` checkboxes for work with choosen records:
 * Turn on selection checkboxes:
   
   ```javascript 
+  
     task.customers.selections = []
   ```
 
 * After changing their value in the customer form, we check their values
 
   ```javascript
+  
     task.customers.selections
   ```
 
 * Turn off it:
   
   ```javascript
+  
     task.customers.selections = undefined
   ```
 
 ### Play with records of dataset:
 
 ```javascript
+  
   // Go to the next record in the current dataset
   task.customers.next()
   
@@ -110,9 +115,10 @@ We have `selection` checkboxes for work with choosen records:
 
 ## Event-driven Jam.py nature  
 
-Let we write a `on_after_insert` event handler of the item, with the `unitprice` field:
+Let we write the `on_after_insert` event handler of the item, with the `unitprice` field:
   
 ```javascript
+  
   item.unitprice.value = 1;
 ```  
     

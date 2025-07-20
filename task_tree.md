@@ -16,7 +16,7 @@ If we run the Demo application and open the browser web console, and enter:
   > Task {owner: undefined, item_name: 'demo', item_caption: 'Jam.py demo', visible: null, ID: 1, ...}
 ```
 
-`The task` object, on the client, is a `global` object and is available in all client modules. 
+The `task` object, on the client, is a `global` object and is available in all client modules. 
 
 It represents a `tree`. Each `item` of the `tree` can `own` other `items`:
 
@@ -98,7 +98,7 @@ To get the `task` to which the `item` belongs, use its `task` attribute.
   Task {owner: undefined, item_name: "demo", item_caption: "Jam.py demo", visible: null, ID: 1, ...}
 ```
 
-Each `item` of `the tree` has a lot of attributes and methods.
+Each `item` of the `tree` has a lot of attributes and methods.
 
 ```javascript
 
@@ -108,7 +108,7 @@ Each `item` of `the tree` has a lot of attributes and methods.
 
 ### The server task
 
-Let's demonstrate `the task` on `the server`.  The `on_created` event is triggered when `the task tree` is created, or rebuilt if it has changed.
+Let's demonstrate the `task` on the `server`.  The `on_created` event is triggered when the `task tree` is created, or rebuilt if it has changed.
 
 ```python
 
@@ -125,10 +125,10 @@ Result we can see on the our server console:
 
 ![Demonstrate on_created on the server task](_images/on_created.png)
 
-`The task` is not global object in `the server` module. But usually it is passed 
-as a parameter to the functions and event handlers of the module, and knowing this item we can get access to any other item of `the tree`. 
+The `task` is not global object in the `server` module. But usually it is passed 
+as a parameter to the functions and event handlers of the module, and knowing this item we can get access to any other item of the `tree`. 
 
-In addition, it is possible to create copies of `the items` associated with `the database table`. 
+In addition, it is possible to create copies of the `items` associated with the `database table`. 
 
 ```python
 
@@ -137,7 +137,7 @@ In addition, it is possible to create copies of `the items` associated with `the
   cust_b.view()
 ```
 
-These copies are not included in `the task tree` and are deleted by the garbage collector when they are no longer used, but you can create a task attribute that references it.
+These copies are not included in the `task tree` and are deleted by the garbage collector when they are no longer used, but you can create a task attribute that references it.
 
 ### The Jam.py Workflow
 

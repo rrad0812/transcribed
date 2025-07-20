@@ -46,10 +46,10 @@ Then run the `server.py` script created by `jam-project.py`.
 
 To complete the creation of the project we'll start [appbuilder page](http://localhost:8080/builder.html) in any browser:
 
-* First we are selecting `the project language`, 
-* After that, `the project parameters` dialog will appear. Now we specify 
-  * `The caption` and 
-  * `The name` of the project.
+* First we are selecting the `project language`, 
+* After that, the `project parameters` dialog will appear. Now we specify 
+  * The `caption` and 
+  * The `name` of the project.
   * We will use `SQLITE` database. 
     * Let's name it `crm.sqlite`.
     
@@ -94,7 +94,8 @@ Here is now an empty menu.
   
     </br>
   
-    **Note**: This behaviour is changed, all viewed fields are searchable!
+  [!Note] </br> 
+  This behaviour is changed, all viewed fields are searchable!
 
 ##### Added some customers
 
