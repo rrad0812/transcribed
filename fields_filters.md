@@ -227,7 +227,7 @@ To get or set filter value use filter value property
 ```javascript
   task.journal.filters.date.value = new Date()
   task.journal.open(true)
-
+```
 > [!Note] </br>
 > Items can generate some events associated with filters. 
 
