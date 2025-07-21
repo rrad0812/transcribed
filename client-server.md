@@ -1,4 +1,4 @@
-[[Dataset 2]](datasets2.md)[[Table of content]](index.md)[[Working wirh data on the sever]](server-data.md)
+[[Dataset 2]](datasets2.md)[[Table of content]](index.md)[[Working with data on the sever]](server-data.md)
 
 # The client-server interaction
 
@@ -139,4 +139,4 @@ Besides this client-server exchange mechanism you can:
 - using the client task `upload` method,
 - and process `post` requests from other application or services by using the `on_ext_request` event handler by the server task.
 
-[[Dataset 2]](datasets2.md)[[Table of content]](index.md)[[Working wirh data on the sever]](server-data.md)
+[[Dataset 2]](datasets2.md)[[Table of content]](index.md)[[Working with data on the sever]](server-data.md)

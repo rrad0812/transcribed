@@ -18,7 +18,7 @@ exceptional framework should be greatly facilitated.
 - [Client server interaction](client-server.md)
 - [Working with data on the server](datasets3.md)
 - [Fields and filters](fields_filters.md)
-- [Data aware](data_aware.md)
+- [Data aware controls](data_aware.md)
 - [Forms](forms.md)
-- [Form events](form_events.md)
+
 
