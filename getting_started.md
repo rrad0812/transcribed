@@ -92,7 +92,7 @@ Here is now an empty menu.
   For `Catalog` item fields, whose default attribute is set, the default code 
   creates a search functionality. 
     
-  > [!Note] </br> 
+  > [!Note]
   > This behaviour is changed, all viewed fields are searchable!
 
 ##### Added some customers

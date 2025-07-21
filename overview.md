@@ -8,36 +8,23 @@ web database applications.
 **It uses**:
 
 * `Python` and `Werkzeug` network library on the server side,
-
 * `Javascript`, `JQuery` and `Bootstrap` on the client side,
-  
 * `Application Builder` for graphical development on the server and client side,
-  
 * a dozen predefined css themes,
-
 * `SQLite`, `MySQL`, `PostgrSQL`, `Firebird`, `MS SQL Server` and `Oracle` databases,
   for work in a new or existing database schema,
-
 * `LibreOffice` templates for create reports, in the `pdf`, `excel` or `csv` formats,
-
 * `data-aware` controls.
 
 **We can create**:
 
 * dashboards as well as big applications with complex business logic,
-
 * filters for filtering data by one or more selected conditions,
-
 * search criteria for data by selected conditions, 
-
 * user actions associated with predefined javascript buttons,
-
 * cascade-linked combo-boxes with incremental search capabilities,
-  
 * pages for the authentication and authorization actions,
-
 * help systems associated with any of controls in a from,
-
 * applications, with foreign python and javascript libraries.
 
 ## Jam.py has powerful library
@@ -119,7 +106,7 @@ Let we write the `on_after_insert` event handler of the item, with the `unitpric
     
 From now on, each newly added record will have predefined value of the `unitprice` field equally 1.0.
 
-> [!Note] </br>
+> [!Note]
 > The `on_after_insert` is right place for set up `default value` for any of user item defined fields.
 
 

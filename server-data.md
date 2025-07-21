@@ -25,7 +25,7 @@ the `open` method to display the changes.
   })
 ```
 
-> [!Note] </br>
+> [!Note]
 > Functions on the server can be executed in parallel threads. Always create 
 	copies of items when working with datasets.
 
@@ -134,7 +134,7 @@ Use the `execute_select` method to execute the sql select query. This method ret
     task.catalog.server('pool_execute_select', true)
   ```
 
-> [!Note] </br>
+> [!Note]
 > For the catalog item, the value of the 'Soft Delete' attribute is set to true, 
 	which means that the delete method does not remove the record from the table, 
 	but uses the deleted field to mark the record as deleted. The item's open method 	takes this into account, in all other cases you must add  this condition: </br>  
@@ -165,10 +165,10 @@ Let's empty the catalog table and add 10 records using the `execute` method of t
   })
 ```
 
-> [!Note] </br>
+> [!Note]
 > The parameter of the execute methods can be a query string, a list of query strings, a list of lists and so on. 
 
-> [!Note] </br>
+> [!Note]
 > All queries are executed in one transaction and if execution succeeds the commit command is called, otherwise rollback command is executed.
 
 ### Create independent connection
@@ -212,7 +212,7 @@ the `create_connection` method of the task or using the sqlite3 `connect` functi
   })
 ```
 
-> [!Note] </br>
+> [!Note]
 > Do not forget to close the connection.
 
 [[Client server interaction]](client-server.md)[[Table of content]](index.md)[[Fields and filters]](fields_filters.md)

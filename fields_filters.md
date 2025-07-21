@@ -56,7 +56,7 @@ To access the item dataset, the field object have the following properties:
   task.journal.date.value
   task.journal.currency.value
 ```
-> [!Note] </br>
+> [!Note]
 > When reading, the value is converted to the type of a field. So for fields of type `integer`, `float` and `currency`, if the value of this field is `null`, the value returned by this property is `0`.
 
 * To get an unconverted value use the `data` property.
@@ -93,10 +93,10 @@ To access the item dataset, the field object have the following properties:
     --%d.%m.%Y
     %Y-%m-%d
   ```
-> [!Note] </br>
+> [!Note]
 > Data and display_text properties are read-only, 
 	
-> [!Note] </br>
+> [!Note]
 > The changes to lookup_value and lookup_text properties are not stored in the database.
 
 ### Field event handlers
@@ -124,7 +124,7 @@ Write an *on_field_changed* event handler to respond to any changes in the field
   }
 ```
 
-> [!Note] </br>
+> [!Note]
 > This event is generated every time field value changes. This can lead to an infinite looping.
 
 For example:
@@ -178,7 +178,7 @@ We will assign it dynamically:
   }
 ```
 
-> [!Note] </br>
+> [!Note]
 > The above code can be placed anywhere in the jam.py code and even in some other 
 event handler. In other words, it may take different forms depending on the value 
 of some external variables or fields.
@@ -228,7 +228,7 @@ To get or set filter value use filter value property
   task.journal.filters.date.value = new Date()
   task.journal.open(true)
 ```
-> [!Note] </br>
+> [!Note]
 > Items can generate some events associated with filters. 
 
 [[Working with data on the server]](server-data.md)[[Table of content]](index.md)

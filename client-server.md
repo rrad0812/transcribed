@@ -24,7 +24,7 @@ The `process_request` method sends to the server the following information:
 * `ID` of the `item`, whose method was called
 * `request` parameters
 
-> [!Note] </br>
+> [!Note]
 > Each item of the task tree has a unique ID attribute.
 
 The server on receiving the request, based on passed IDs, finds the corresponding 
@@ -57,7 +57,7 @@ by using the `server` method
 
 We pass it, the name of the function and the list of parameters.
 
-> [!Note] </br>
+> [!Note]
 > The first parameter of the function on the server must be an item object.
 
 If a `callback` function is specified, the function on the server is executed asynchronously, after which the callback is executed with parameters that are:

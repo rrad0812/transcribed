@@ -159,7 +159,7 @@ To disable a filter set its value to `null`
 The `where` parameter of the `open` method is a dictionary, whose keys are names 
 of the fields that are followed, after double underscore, by a filter symbol.
 
-> [!Note]</br>
+> [!Note]
 > For EQ (equal) filter the filtering symbol '__eq' can be omitted. </br>
 > For example {id: 100} is equivalent to {id__eq: 100}.
 
