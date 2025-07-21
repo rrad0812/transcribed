@@ -1,4 +1,4 @@
-[[Overview]](overview.md) [[Table of content]](index.md) [[Task tree]](task_tree.md)
+[< Overview](overview.md) | [Table of content](index.md) | [Task tree >](task_tree.md)
 
 # The getting started
 
@@ -247,4 +247,4 @@ application using css.
     font-weight: bold;
   }
 ```
-[[Overview]](overview.md) [[Table of content]](index.md) [[Task tree]](task_tree.md)
+[< Overview](overview.md) | [Table of content](index.md) | [Task tree >](task_tree.md)

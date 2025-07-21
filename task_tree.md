@@ -1,4 +1,4 @@
-[[Getting started]](getting_started) [[Table of content]](index.md) [[Datasets]](datasets.md)
+[< Getting started](getting_started.md) | [Table of content](index.md) | [Client server interaction >](client-server.md)
 
 # The task tree
 
@@ -135,4 +135,4 @@ On the bellow image is displayed the Jam.py workflow graphically.
 
 ![Jam.py Workflow](_images/jampy-workflow.png)
 
-[[Getting started]](getting_started) [[Table of content]](index.md) [[Datasets]](datasets.md)
+[< Getting started](getting_started.md) | [Table of content](index.md) | [Client server interaction >](client-server.md)

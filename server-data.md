@@ -1,4 +1,4 @@
-[[Client server interaction]](client-server.md)[[Table of content]](index.md)[[Fields and filters]](fields_filters.md)
+[< Datasets 2](datasets2.md) | [Table of content](index.md) | [Fields and filters >](fields_filters.md)
 
 # Working with data on the server
 
@@ -215,4 +215,4 @@ the `create_connection` method of the task or using the sqlite3 `connect` functi
 > [!Note]
 > Do not forget to close the connection.
 
-[[Client server interaction]](client-server.md)[[Table of content]](index.md)[[Fields and filters]](fields_filters.md)
+[< Datasets 2](datasets2.md) | [Table of content](index.md) | [Fields and filters >](fields_filters.md)

@@ -1,5 +1,5 @@
 
-# The quick introduction in Jam.py
+# The quick introduction to Jam.py
 
 The idea for adding this documents in Jam.Py documentation was:
 - Transfer video tutorials, created by *Mr. Andrew Yushew*, in a text format and
@@ -13,10 +13,10 @@ exceptional framework should be greatly facilitated.
 - [Overview](overview.md)
 - [Getting_started](getting_started.md)
 - [Task_tree](task_tree.md)
+- [Client server interaction](client-server.md)
 - [Datasets](datasets.md)
 - [Datasets 2](datasets2.md)
-- [Client server interaction](client-server.md)
-- [Working with data on the server](datasets3.md)
+- [Working with data on the server](server-data.md)
 - [Fields and filters](fields_filters.md)
 - [Data aware controls](data_aware.md)
 - [Forms](forms.md)

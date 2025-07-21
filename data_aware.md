@@ -1,5 +1,4 @@
-[[Fields and filters]](fields_filters.md)[[Table of content]](index.md)
-[[Forms]](forms.md)
+[< Fields and filters](fields_filters.md) | [Table of content](index.md) | [Forms >](forms.md)
 
 # Data aware controls
 
@@ -111,5 +110,4 @@ the following videos.
 
 There are two other methods: `create_filter_inputs` and `create_param_inputs`. They work just like `create_inputs`, but they are used to edit filters values of data items and parameter values of report items.
 
-[[Fields and filters]](fields_filters.md)[[Table of content]](index.md)
-[[Forms]](forms.md)
+[< Fields and filters](fields_filters.md) | [Table of content](index.md) | [Forms >](forms.md)

@@ -1,4 +1,4 @@
-[[Data aware]](data_aware.md)[[Table of content]](index.md)
+[< Data aware](data_aware.md) | [Table of content](index.md)
 
 # Forms
 
@@ -120,5 +120,4 @@ the corresponding video. So we will show the essence in a slightly different way
 [2]: Hierarchical event processing is what distinguishes Jam.py most, contributes to 
 the small size of the code and some kind of inheritance behavior.
 
-[[Data aware]](data_aware.md)[[Table of content]](index.md)
-
+[< Data aware](data_aware.md) | [Table of content](index.md)

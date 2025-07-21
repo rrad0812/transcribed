@@ -1,4 +1,4 @@
-[[Table of content]](index.md) [[Getting started]](getting_started.md)
+[Table of content](index.md) | [Getting started >](getting_started.md)
 
 # The overview
 
@@ -118,4 +118,4 @@ It developed and put to use under the terms of a modified BSD license, by Andrew
 
 See all this and many other on http://jam-py.com/.
 
-[[Table of content]](index.md) [[Getting started]](getting_started.md)
+[Table of content](index.md) | [Getting started >](getting_started.md)

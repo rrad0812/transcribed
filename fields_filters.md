@@ -1,5 +1,4 @@
-[[Working with data on the server]](server-data.md)[[Table of content]](index.md)
-[[Data aware controls]](data_aware.md)
+[< Working with data on the server](server-data.md) | [Table of content](index.md) | [Data aware controls >](data_aware.md)
 
 # Fields and filters
 
@@ -231,5 +230,4 @@ To get or set filter value use filter value property
 > [!Note]
 > Items can generate some events associated with filters. 
 
-[[Working with data on the server]](server-data.md)[[Table of content]](index.md)
-[[Data aware controls]](data_aware.md)
+[< Working with data on the server](server-data.md) | [Table of content](index.md) | [Data aware controls >](data_aware.md)

@@ -1,4 +1,4 @@
-[[Datasets]](datasets.md)[[Table of content]](index.md)[[Client server interaction]](client-server.md)
+[< Datasets](datasets.md) | [Table of content](index.md) | [Work with data on the server >](server-data.md)
 
 # Datasets 2
 
@@ -165,4 +165,4 @@ of the fields that are followed, after double underscore, by a filter symbol.
 
 For more information, see the Documentation.
 
-[[Datasets]](datasets.md)[[Table of content]](index.md)[[Client server interaction]](client-server.md)
+[< Datasets](datasets.md) | [Table of content](index.md) | [Work with data on the server >](server-data.md)

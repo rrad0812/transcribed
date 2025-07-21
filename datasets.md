@@ -1,4 +1,4 @@
-[[Task tree]](task_tree.md)[[Table of content]](index.md)[[Datasets 2]](datasets2.md)
+[< Client server interaction](client-server.md) | [Table of content](index.md) | [Datasets 2 >](datasets2.md)
 
 # Datasets
 
@@ -297,4 +297,4 @@ Now we define `before_post` event handler
   c.value.value = 1001          // c.name.value = 1001
 ```
 
-[[Task tree]](task_tree.md)[[Table of content]](index.md)[[Datasets 2]](datasets2.md)
+[< Client server interaction](client-server.md) | [Table of content](index.md) | [Datasets 2 >](datasets2.md)
